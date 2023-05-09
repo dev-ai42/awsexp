@@ -1,7 +1,9 @@
 #!/bin/bash
 
 stack_name=DeployResiliencyWorkshop
-file_name=chaos_mult_min.json
+#file_name=chaos_mult_min.json
+file_name=lambda_functions_for_deploy.json
+
 
 aws cloudformation create-stack \
     --stack-name $stack_name \
