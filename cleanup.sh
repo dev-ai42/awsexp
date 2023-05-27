@@ -1,7 +1,7 @@
 #!/bin/bash
 
-buckets=$(aws s3api list-buckets --query "Buckets[?contains(Name,'webserversforresiliencytesting-canarybucket
-')].Name" --output text)
+buckets=$(aws s3api list-buckets --query "Buckets[?contains(Name,'webserversforresiliencytesting-canarybucket')].Name" --output text)
+webserversforresiliencytesting-canarybucket-
 for bucket_name in ${buckets[@]}; do
     #echo $bucket_name
     aws s3 rm s3://$bucket_name --recursive
